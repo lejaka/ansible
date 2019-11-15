@@ -1,24 +1,8 @@
----
+[server:vars]
+ansible_become=yes
+ansible_become_method=sudo
+ansible_become_user=root
+ansible_user=ansible
 
-all:
-        hosts:
-                test1:
-                        test2:
-                                var1: value1
-                                vars:
-                                        group_var1: value2
-                                        children:
-                                                other_group:
-                                                        children:
-                                                                group_x:
-                                                                        hosts:
-                                                                                test5
-                                                                        vars: g2_var2: value3
-                                                                        hosts: test4:
-                                                                                ansible_host: 127.0.0.1
-                                                                                last_group: 
-                                                                                hosts: 
-                                                                                test1
-                                                                                vars:
-                                                                                        lastvar: MYVALUE
-
+[servers]
+24.150.10.212
