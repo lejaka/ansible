@@ -1,2 +1,11 @@
+# Creaing a file
 ---
-# tasks file for helloworld
+- hosts: localhost
+
+  tasks:
+  - name: ansible set permission recursvely for a directory
+    file:
+     path: "/home/devops_directory"
+     state: directory
+     mode: "u=rw,g=wx,o=rwx"
+     recurse: yes
