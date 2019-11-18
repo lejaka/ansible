@@ -1,0 +1,9 @@
+#Ansible script to remove files
+
+--- 
+- hosts: localhost
+  tasks:
+  - name: Task to rename a file, then remove the old one
+    file: 
+     path: /home/devops_directory
+     state: absent
