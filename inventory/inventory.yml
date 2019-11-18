@@ -5,4 +5,4 @@ ansible_become_user=root
 ansible_user=ansible
 
 [servers]
-24.150.10.212
+22.150.35.118
